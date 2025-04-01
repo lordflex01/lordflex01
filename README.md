@@ -10,40 +10,40 @@
 <h3 align="left">💻 Languages:</h3>
 <p align="left">
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="html5" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21~bgwhite.svg" alt="html5" width="60" height="40"/> 
   </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
     <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21~bgwhite.svg" alt="css3" width="60" height="40"/> 
   </a> 
   <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg" alt="tailwind" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21~bgwhite.svg" alt="tailwind" width="60" height="40"/> 
   </a> 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg" alt="javascript" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21~bgwhite.svg" alt="javascript" width="60" height="40"/> 
   </a>
    <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg" alt="mysql" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21~bgwhite.svg" alt="mysql" width="60" height="40"/> 
   </a> 
    <a href="https://www.java.com" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg" alt="java" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/java/java-ar21~bgwhite.svg" alt="java" width="60" height="40"/> 
   </a> 
    <a href="https://www.php.net" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/php/php-ar21.svg" alt="php" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/php/php-ar21~bgwhite.svg" alt="php" width="60" height="40"/> 
   </a>
     <a href="https://symfony.com" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/symfony/symfony-ar21.svg" alt="symfony" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/symfony/symfony-ar21~bgwhite.svg" alt="symfony" width="60" height="40"/> 
   </a> 
   <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="mongodb" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21~bgwhite.svg" alt="mongodb" width="60" height="40"/> 
   </a> 
   <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg" alt="oracle" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/oracle/oracle-ar21~bgwhite.svg" alt="oracle" width="60" height="40"/> 
   </a> 
     <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="python" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/python/python-ar21~bgwhite.svg" alt="python" width="60" height="40"/> 
   </a> 
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="react" width="60" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21~bgwhite.svg" alt="react" width="60" height="40"/> 
   </a>
 </p>
 
