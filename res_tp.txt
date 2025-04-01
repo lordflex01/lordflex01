@@ -1,0 +1,101 @@
+Q-3.1
+
+CREATE TABLE Poste (
+idPoste INT PRIMARY KEY AUTO_INCREMENT,
+libelle VARCHAR(50),
+salaire FLOAT,
+statut VARCHAR(50),
+deplacement VARCHAR(50),
+avantageSociaux VARCHAR(50),
+code INT NOT NULL,
+FOREIGN KEY (code) REFERENCES secteurActivite(code) ON DELETE CASCADE
+);
+
+CREATE TABLE Candidature (
+code INT PRIMARY KEY AUTO_INCREMENT,
+commentaire TEXT,
+dateCand DATE,
+statut VARCHAR(50),
+idCandidat INT NOT NULL,
+idPoste INT NOT NULL,
+FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat) ON DELETE CASCADE,
+FOREIGN KEY (idPoste) REFERENCES Poste(idPoste) ON DELETE CASCADE
+);
+
+Q-3.2
+
+INSERT INTO Poste VALUES ("Responsable Relais", "2000 euros", "CDI", "Tout le pays", "Tickets restauration", 2);
+
+INSERT INTO Candidature VALUES ("Candidature fortement intéressante", 2022-02-20, "Encours d'étude", 2, 6);
+
+Q-3.3
+
+SELECT * FROM Poste p 
+LEFT JOIN secteurActivite s ON p.code=s.code 
+WHERE s.libelle LIKE "Conduite de camions";
+
+SELECT c.nom, c.prenom, q.numero, q.libelle, o.dateObtention, o.mention
+FROM Candidat c
+LEFT JOIN Obtenir o ON o.idCandidat=c.idCandidat
+LEFT JOIN Qualification o.numero=q.numero;
+
+SELECT p.libelle, p.salaire, p.statut, COUNT(c.code)
+FROM Poste p
+LEFT JOIN Candidature c ON c.idPoste=p.idPoste;
+
+SELECT ca.dateCand, ca.statut, ca.commentaire, c.nom, c.prenom, p.libelle, s.libelle 
+FROM Candidature ca 
+JOIN Candidat c ON ca.idCandidat=c.idCandidat
+JOIN Poste p ON ca.idPoste=p.idPoste
+JOIN secteurActivite s ON p.code=s.code
+WHERE ca.statut LIKE "acceptée" AND s.libelle LIKE "Conduite de camions";
+
+SELECT c.nom, c.prenom, c.dateNaissance, c.email, c.tel, ca.dateCand, ca.statut, ca.commentaire, p.libelle, p.salaire
+FROM Candidat c 
+JOIN Candidature ca ON ca.idCandidat=c.idCandidat
+JOIN Poste p ON ca.idPoste=p.idPoste
+WHERE *p.salaire < 2500* AND (YEAR(CURRENT_DATE()) - YEAR(c.dateNaissance))>25;
+
+*attribut salaire en VARCHAR donc comparaison impossible
+
+Q-3.4
+
+ALTER TABLE Poste 
+ADD nbcands INT NOT NULL ;
+
+Q-3.5
+
+DELIMITER //
+CREATE OR UPDATE TRIGGER archicandidature
+AFTER DELETE ON Candidature
+FOR EACH ROW
+BEGIN
+INSERT INTO H_candidature (SELECT ca.commentaire, ca.dateCand, ca.statut, c.nom, c.prenom, p.libelle FROM Candidature ca LEFT JOIN Candidat c ON ca.idCandidat=c.idCandidat LEFT JOIN Poste p ON ca.idPoste=p.idPoste WHERE ca.code=old.code);
+END;
+END //
+DELIMITER ;
+
+Q-3.6
+
+DELIMITER //
+CREATE OR UPDATE ajoutcands
+AFTER INSERT ON Candidature
+FOR EACH ROW
+BEGIN
+UPDATE Poste SET nbcands = nbcands+1 WHERE idPoste=new.idPoste;
+END;
+END //
+DELIMITER ;
+
+Q-3.7
+
+DELIMITER //
+CREATE PROCEDURE nbcandidature
+(IN lib VARCHAR(50))
+BEGIN
+SELECT COUNT(c.code), p.libelle
+FROM Candidature c 
+LEFT JOIN POste p ON c.idPoste=p.idPoste
+WHERE p.libelle = lib;
+END //
+DELIMITER ;
