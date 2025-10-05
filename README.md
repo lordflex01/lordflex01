@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Abass</h1>
 <h3 align="center">A passionate Software Engineer👨🏾‍💻 from France 🇫🇷</h3>
 
-- ➡️ Currently : **Software Engineer at Capgemini(France)**
+- ➡️ Currently : **Open to work**
 
-- ⬅️ Previously : **FullStack Dev at COSJUDO(France)**
+- ⬅️ Previously : **Software Engineer at Capgemini(France)**
 
 - 📧 How to reach me **dieneabass01@yahoo.com**
 
